@@ -1,4 +1,4 @@
-# Electron App Template
+# Crypto Exchange Studio Desktop App
 
 This repository is a fork of the excellent [Electron App by Dalton Menezes](https://github.com/daltonmenezes/electron-app) customized for WEB6's Electron application development.
 

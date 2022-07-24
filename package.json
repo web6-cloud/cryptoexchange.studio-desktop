@@ -1,11 +1,11 @@
 {
-  "displayName": "Electron App",
-  "name": "w6-electron-app",
-  "description": "App description",
+  "displayName": "Crypto Exchange Sudio",
+  "name": "crypto-exchange-studio",
+  "description": "This desktop app interracts with cryptoexchange.studio services.",
   "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "https://github.com/w6cloud/electron-app.git"
+    "url": "https://github.com/web6-cloud/cryptoexchange.studio-desktop.git"
   },
   "main": "./node_modules/.dev-temp-build/main.js",
   "devTempBuildFolder": "./node_modules/.dev-temp-build",
@@ -40,6 +40,7 @@
   },
   "dependencies": {
     "react": "^17.0.2",
+    "react-desktop": "^0.3.9",
     "react-dom": "^17.0.2",
     "react-router-dom": "^6.2.1"
   },
