@@ -1,0 +1,103 @@
+{
+  "displayName": "Electron App",
+  "name": "w6-electron-app",
+  "description": "App description",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/w6cloud/electron-app.git"
+  },
+  "main": "./node_modules/.dev-temp-build/main.js",
+  "devTempBuildFolder": "./node_modules/.dev-temp-build",
+  "devServer": "http://localhost:4927",
+  "author": {
+    "name": "WEB6 Cloud",
+    "email": "hello@delay.web6.email"
+  },
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "build": "cross-env NODE_ENV=production yarn r clean webpack:main webpack:renderer",
+    "postbuild": "node ./bin/modules/postbuild/index.js",
+    "predev": "cross-var \"rimraf $npm_package_devTempBuildFolder\"",
+    "dev": "concurrently \"cross-env BROWSER=none yarn dev:renderer\" \"yarn r server:wait nodemon:start\"",
+    "dev:main": "cross-env NODE_ENV=development yarn r webpack:main start",
+    "dev:renderer": "cross-env NODE_ENV=development yarn r webpack:renderer webpack:serve",
+    "postinstall": "yarn r build install:deps",
+    "install:deps": "electron-builder install-app-deps",
+    "make:release": "node ./bin/modules/release/index.js",
+    "webpack:main": "webpack --config ./webpack/main.config.js",
+    "webpack:renderer": "webpack --config ./webpack/renderer.config.js",
+    "webpack:serve": "webpack serve --config ./webpack/renderer.config.js",
+    "server:wait": "cross-var \"wait-on $npm_package_devServer\"",
+    "nodemon:start": "nodemon --watch src/main --watch src/renderer/bridge --watch src/shared --ignore src/resources --ext \"*\" --exec yarn dev:main",
+    "predist": "yarn build",
+    "dist": "./node_modules/.bin/electron-builder",
+    "release": "electron-builder --publish always",
+    "clean": "rimraf dist",
+    "prepare": "husky install",
+    "r": "yarn run-s"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^6.2.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.7",
+    "@svgr/webpack": "^6.2.1",
+    "@swc/cli": "^0.1.57",
+    "@swc/core": "^1.2.207",
+    "@types/node": "^18.0.0",
+    "@types/react": "^17.0.39",
+    "@types/react-dom": "^17.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.30.0",
+    "@typescript-eslint/parser": "^5.30.0",
+    "concurrently": "^7.2.2",
+    "copy-webpack-plugin": "^11.0.0",
+    "cross-env": "^7.0.3",
+    "cross-var": "^1.1.0",
+    "css-loader": "^6.7.1",
+    "electron": "^19.0.6",
+    "electron-builder": "^23.1.0",
+    "electron-devtools-installer": "^3.2.0",
+    "electron-react-devtools": "^0.5.3",
+    "eslint": "^8.18.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.1.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "nodemon": "^2.0.18",
+    "npm-run-all": "^4.1.5",
+    "open": "^8.4.0",
+    "prettier": "^2.7.1",
+    "react-refresh": "^0.14.0",
+    "rimraf": "^3.0.2",
+    "sass": "^1.53.0",
+    "sass-loader": "^13.0.2",
+    "semver": "^7.3.7",
+    "simple-progress-webpack-plugin": "^2.0.0",
+    "style-loader": "^3.3.1",
+    "swc-loader": "^0.2.3",
+    "tsconfig-paths-webpack-plugin": "^3.5.2",
+    "typescript": "^4.7.4",
+    "typescript-plugin-css-modules": "^3.4.0",
+    "wait-on": "^6.0.1",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.9.3"
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "eslint --quiet --fix"
+    ]
+  },
+  "eslintIgnore": [
+    "dist"
+  ]
+}

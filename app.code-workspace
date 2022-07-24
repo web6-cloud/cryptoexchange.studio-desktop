@@ -1,0 +1,50 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			".editorconfig": true,
+			".eslintrc.js": true,
+			".github": true,
+			".husky": true,
+			".swcrc": true,
+			"**/.DS_Store": true,
+			"**/.git": true,
+			"**/.hg": true,
+			"**/.svn": true,
+			"**/*.lock": true,
+			"**/CVS": true,
+			"**/node_modules": true,
+			"**/Thumbs.db": true,
+			"LICENSE": true,
+			"tsconfig.json": true
+		}
+	},
+	"extensions": {
+		"recommendations": [
+			"aaron-bond.better-comments",
+			"adam-bender.commit-message-editor",
+			"antoniormrzz.electron-snippets",
+			"christian-kohler.npm-intellisense",
+			"dbaeumer.vscode-eslint",
+			"eamodio.gitlens",
+			"esbenp.prettier-vscode",
+			"jock.svg",
+			"joshbolduc.commitlint",
+			"kakumei.ts-debug",
+			"miclo.sort-typescript-imports",
+			"ms-vscode.vscode-typescript-next",
+			"rvest.vs-code-prettier-eslint",
+			"salbert.comment-ts",
+			"snyk-security.vscode-vuln-cost",
+			"syler.sass-indented",
+			"usernamehw.errorlens",
+			"visualstudioexptteam.vscodeintellicode",
+			"xqchen.yarn-ui",
+			"yzhang.markdown-all-in-one",
+		]
+	}
+}
