@@ -40,11 +40,13 @@
 			"rvest.vs-code-prettier-eslint",
 			"salbert.comment-ts",
 			"snyk-security.vscode-vuln-cost",
+			"spmeesseman.vscode-taskexplorer",
 			"syler.sass-indented",
 			"usernamehw.errorlens",
 			"visualstudioexptteam.vscodeintellicode",
+			"vlazh.yarn-update-deps",
 			"xqchen.yarn-ui",
-			"yzhang.markdown-all-in-one",
+			"yzhang.markdown-all-in-one"
 		]
 	}
 }
