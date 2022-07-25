@@ -9,8 +9,8 @@ export function AboutWindow() {
     title: `${APP_CONFIG.TITLE} - About`,
     width: 450,
     height: 350,
-    resizable: false,
-    alwaysOnTop: true,
+    resizable: true,
+    alwaysOnTop: false,
   })
 
   return window

@@ -1,8 +1,10 @@
-import { useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 
-import { Container, Heading, Button } from 'renderer/components'
+import { Button, Container, Heading } from 'renderer/components'
 import { useWindowStore } from 'renderer/store'
+
+import { Logo } from 'renderer/components/Logo'
 
 export function MainScreen() {
   const { App } = window // The "App" comes from the bridge
@@ -29,7 +31,7 @@ export function MainScreen() {
     <Container>
       <Heading>Hi, {App.username || 'there'}! 👋</Heading>
 
-      <h2>It's time to build something awesome! ✨</h2>
+      <Logo type="square" color="blue" />
 
       <nav>
         <Button

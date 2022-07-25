@@ -5,6 +5,18 @@
 		}
 	],
 	"settings": {
+		"autoalign.columnWidth": 1,
+		"autoalign.minSeparationLeft": 0,
+		"editor.codeActionsOnSave": {
+			"source.fixAll": true,
+			"source.organizeImports": true
+		},
+		"editor.formatOnSave": true,
+		"errorLens.onSave": false,
+		"eslint.codeActionsOnSave.rules": [
+			"autoalign"
+		],
+		"files.autoSave": "afterDelay",
 		"files.exclude": {
 			".editorconfig": true,
 			".eslintrc.js": true,
@@ -17,11 +29,48 @@
 			"**/.svn": true,
 			"**/*.lock": true,
 			"**/CVS": true,
-			"**/node_modules": false,
 			"**/Thumbs.db": true,
 			"LICENSE": true,
+			"node_modules": true,
 			"tsconfig.json": true
-		}
+		},
+		"git.confirmSync": false,
+		"git.enableSmartCommit": true,
+		"html.format.extraLiners": "head, body, /html",
+		"html.format.indentHandlebars": true,
+		"html.format.indentInnerHtml": true,
+		"html.format.wrapAttributes": "force-expand-multiline",
+		"html.format.wrapLineLength": 0,
+		"svg.preview.mode": "svg",
+		"workbench.colorCustomizations": {
+			"statusBar.background": "#9155FD",
+			"statusBar.debuggingBackground": "#73cfa8",
+			"statusBar.foreground": "#ffffff",
+			"statusBar.debuggingForeground": "#ffffff",
+			"statusBar.noFolderBackground": "#73cfa8",
+		},
+		"workbench.startupEditor": "welcomePageInEmptyWorkbench",
+		"[html]": {
+			"editor.defaultFormatter": "esbenp.prettier-vscode"
+		},
+		"[json]": {
+			"editor.defaultFormatter": "esbenp.prettier-vscode"
+		},
+		"[jsx]": {
+			"editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+		},
+		"[jsx-tags]": {
+			"editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+		},
+		"[sass]": {
+			"editor.defaultFormatter": "esbenp.prettier-vscode"
+		},
+		"[typescript]": {
+			"editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+		},
+		"[typescriptreact]": {
+			"editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+		},
 	},
 	"extensions": {
 		"recommendations": [
@@ -48,5 +97,5 @@
 			"xqchen.yarn-ui",
 			"yzhang.markdown-all-in-one"
 		]
-	}
+	},
 }

@@ -1,8 +1,8 @@
 import { BrowserWindow } from 'electron'
 import { join } from 'path'
 
-import { ENVIRONMENT } from 'shared/constants'
 import { createWindow } from 'main/factories'
+import { ENVIRONMENT } from 'shared/constants'
 import { APP_CONFIG } from '~/app.config'
 
 const { MAIN, TITLE } = APP_CONFIG
@@ -15,8 +15,8 @@ export async function MainWindow() {
     height: MAIN.WINDOW.HEIGHT,
     center: true,
     movable: true,
-    resizable: false,
-    alwaysOnTop: true,
+    resizable: true,
+    alwaysOnTop: false,
 
     webPreferences: {
       preload: join(__dirname, 'bridge.js'),
